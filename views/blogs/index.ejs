@@ -12,7 +12,7 @@
             <% blogs.forEach(blog => { %>
                 <a class="single" href="/blogs/<%= blog._id %>">
                 <h3 class="title"><%= blog.title %></h3>
-                <p class="snippet"><%= blog.snippet %></p>
+                <p class="date"><%= blog.createdAt.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }) %></p>
                 </a>
            <% }) %>
         <% } else { %>
